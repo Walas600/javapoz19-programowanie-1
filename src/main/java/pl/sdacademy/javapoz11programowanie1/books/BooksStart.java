@@ -1,5 +1,6 @@
 package pl.sdacademy.javapoz11programowanie1.books;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class BooksStart {
@@ -33,12 +34,14 @@ public class BooksStart {
 
     private void authorsView() {
         boolean flag = true;
+        List<Author> authors = authorsRepository.findAll();
         do {
-            int decision = views.authorsMenu(authorsRepository.findAll());
+            int decision = views.authorsMenu(authors);
             switch (decision) {
                 case 1:
                     Nation nation = views.getNation();
-
+                    authors =  authorsRepository.findByNAtion(nation);
+                    break;
                 default:
                     flag = false;
             }

@@ -2,6 +2,7 @@ package pl.sdacademy.javapoz11programowanie1.books;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class InMemoryAuthorsRepository implements AuthorsRepository{
 
@@ -19,8 +20,10 @@ public class InMemoryAuthorsRepository implements AuthorsRepository{
 
     @Override
     public List<Author> findByNAtion(Nation nation) {
-        //TODO
-        return null;
+        return authors.stream()
+                .filter(author -> author.getNation().equals(nation))
+                .collect(Collectors.toList());
+
     }
 
     private void init(){

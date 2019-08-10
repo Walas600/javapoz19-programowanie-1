@@ -27,7 +27,7 @@ public class BooksViews {
     }
 
     public Nation getNation(){
-        String nationAsString = scanner.nextLine();
+        String nationAsString = scanner.nextLine().trim();
         return Nation.valueOf(nationAsString);
     }
 
