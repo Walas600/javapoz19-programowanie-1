@@ -40,4 +40,9 @@ public class BooksViews {
         System.out.println("0. Wroc");
         return getDecision();
     }
+    public int getBirthYear(){
+        int birthYear = scanner.nextInt();
+        scanner.nextLine();
+        return birthYear;
+    }
 }
