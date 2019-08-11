@@ -2,11 +2,7 @@ package pl.sdacademy.javapoz19programowanie1.user;
 
 import org.junit.Assert;
 import org.junit.Test;
-import pl.sdacademy.javapoz11programowanie1.user.Gender;
-import pl.sdacademy.javapoz11programowanie1.user.User;
-import pl.sdacademy.javapoz11programowanie1.user.UserService;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 

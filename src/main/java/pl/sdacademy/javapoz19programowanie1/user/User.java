@@ -1,6 +1,4 @@
-package pl.sdacademy.javapoz11programowanie1.user;
-
-import java.util.List;
+package pl.sdacademy.javapoz19programowanie1.user;
 
 public class User {
     private String name;
