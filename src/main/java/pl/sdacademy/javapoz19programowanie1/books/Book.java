@@ -54,6 +54,7 @@ public class Book {
                 "name='" + name + '\'' +
                 ", releaseYear=" + releaseYear +
                 ", pages=" + pages +
+                ", author=" + author.getFirstName() + " " + author.getLastname()+
                 '}';
     }
 }
