@@ -1,4 +1,4 @@
-package pl.sdacademy.javapoz11programowanie1;
+package pl.sdacademy.javapoz19programowanie1.books;
 
 public class Book {
     private String name;
@@ -54,6 +54,7 @@ public class Book {
                 "name='" + name + '\'' +
                 ", releaseYear=" + releaseYear +
                 ", pages=" + pages +
+                ", author=" + author.getFirstName() + " " + author.getLastname()+
                 '}';
     }
 }
