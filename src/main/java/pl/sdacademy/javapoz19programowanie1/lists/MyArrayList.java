@@ -75,6 +75,10 @@ public class MyArrayList {
     }
 
     public void add_CloneArray(int index, Integer value){
+        if (index > size) {
+            throw new ArrayIndexOutOfBoundsException(index);
+        }
+
         Integer[] newArray = new Integer[data.length + 1];
         for (int i = 0; i < index ; i++) {
             newArray[i] = data[i];
