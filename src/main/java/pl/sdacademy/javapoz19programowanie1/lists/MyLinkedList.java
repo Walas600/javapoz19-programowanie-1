@@ -25,11 +25,27 @@ public class MyLinkedList {
     //TODO - obsluga pustej listy
     //TODO - obsliga blednego indexu (ArrayIndexOutOfBoundException)
     public Integer get(int index){
+        return getElement(index).value;
+    }
+    private MyLinkedListItem getElement(int index){
         MyLinkedListItem tmpItem = head;
         for (int i = 0; i < index ; i++) {
             tmpItem = tmpItem.nextItem;
         }
-        return tmpItem.value;
+        return tmpItem;
+    }
+
+    public void remove(int index){
+        MyLinkedListItem previousElement = getElement(index - 1);
+        MyLinkedListItem unwantedElement = getElement(index);
+
+        previousElement.nextItem = unwantedElement.nextItem;
+        unwantedElement.nextItem = null;
+        size--;
+
+    }
+    public void add(int index, Integer value){
+        //TODO - na 31 zadanie domowe
     }
 
     public int size(){
